@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: fit-content;
+    width: 100%;
+}
+
+body {
+    font-family: Alata, sans-serif;
+    font-size: 15px;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Header */
+
+header {
+    align-items: flex-start;
+    background: url(./images/desktop/image-hero.jpg) no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    height: 100%;
+    justify-content: space-between;
+    padding: 80px 140px 120px;
+    width: 100%;
+}
+
+header .hamburger {
+    align-items: center;
+    display: none;
+    height: 100%;
+    justify-content: center;
+    width: fit-content;
+}
+
+header .hamburger img {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+header .hamburger .burger-close {
+    display: none;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header nav ul {
+    align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav ul li {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav ul li::after {
+    background-color: white;
+    content: " ";
+    display: block;
+    height: 2px;
+    margin-top: 8px;
+    text-align: center;
+    transition: 0.3s all;
+    width: 0px;
+}
+
+header nav ul li:hover::after {
+    transition: 0.3s all;
+    width: 24px;
+}
+
+header h1 {
+    border: 1px solid hsl(0, 0%, 100%);
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    line-height: 3.5rem;
+    padding: 40px;
+    text-transform: uppercase;
+    width: 50%;
+}
+
+/* Main */
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    height: 100%;
+    justify-content: space-between;
+    padding: 140px;
+    width: 100%;
+}
+
+/* Leader VR */
+
+.leader {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.leader img {
+    width: 65%;
+}
+
+.leader .info {
+    background-color: white;
+    bottom: 0;
+    padding: 60px 0 0 80px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.leader .info h2 {
+    font-family: "Josefin Sans";
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Creations */
+
+.creations {
+    display: grid;
+    grid-template-areas: "header button" "main main";
+    height: fit-content;
+    row-gap: 50px;
+    width: 100%;
+}
+
+.creations h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    grid-area: header;
+    text-transform: uppercase;
+}
+
+.creations button {
+    background: transparent;
+    border: 1px solid hsl(0, 0%, 0%);
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    grid-area: button;
+    justify-self: flex-end;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.creations button:hover {
+    background: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+.creations .images {
+    display: grid;
+    gap: 30px;
+    grid-area: main;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.creations .images .image {
+    cursor: pointer;
+    position: relative;
+}
+
+.creations .images .image:hover img {
+    opacity: 0.2;
+}
+
+.creations .images .image:hover p {
+    color: hsl(0, 0%, 0%);
+}
+
+.creations .images .image img {
+    filter: brightness(80%);
+    height: 100%;
+    width: 100%;
+}
+
+.creations .images .image p {
+    bottom: 0;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 200;
+    left: 0;
+    padding: 40px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    align-items: center;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    gap: 30px;
+    height: fit-content;
+    justify-content: center;
+    padding: 40px 180px;
+    width: 100%;
+}
+
+.logo {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo nav ul {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.logo nav ul li {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo nav ul li::after {
+    background-color: white;
+    content: " ";
+    display: block;
+    height: 2px;
+    margin-top: 8px;
+    text-align: center;
+    transition: 0.3s all;
+    width: 0px;
+}
+
+.logo nav ul li:hover::after {
+    transition: 0.3s all;
+    width: 24px;
+}
+
+.sm {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sm .social-media {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.sm .social-media svg {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(3%) saturate(855%) hue-rotate(97deg) brightness(116%) contrast(100%);
+    height: 30px;
+    width: 30px;
+}
+
+.sm .social-media .social::after {
+    background-color: white;
+    content: " ";
+    display: block;
+    height: 2px;
+    margin-top: 2px;
+    margin: auto;
+    text-align: center;
+    transition: 0.3s all;
+    width: 0px;
+}
+
+.sm .social-media .social:hover::after {
+    transition: 0.3s all;
+    width: 28px;
+}
+
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .leader .info h2 {
+        font-size: 2rem;
+    }
+
+    .creations .images .image p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .creations .images {
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .leader .info h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .leader .info {
+        padding: 30px 0 0 40px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 800px) {
+    .header-logo {
+        position: relative;
+        z-index: 3;
+    }
+
+    header .hamburger {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: fit-content;
+    }
+
+    header .hamburger img {
+        height: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+
+    header .hamburger .burger-close {
+        display: none;
+    }
+
+    header nav ul {
+        align-items: flex-start;
+        background-color: black;
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+        justify-content: center;
+        left: 0;
+        padding: 60px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    header nav ul li {
+        align-items: flex-start;
+        font-size: 1.5rem;
+        height: fit-content;
+        text-transform: uppercase;
+    }
+
+    header nav ul li::after {
+        display: none;
+    }
+
+    .creations .images {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .leader {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .leader img {
+        width: 100%;
+    }
+
+    .leader .info {
+        font-size: 2rem;
+        padding: 0px;
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+
+    .leader .info h2 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        padding: 60px 60px 80px;
+    }
+
+    main {
+        padding: 60px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 50px;
+        padding: 40px 60px;
+    }
+
+    .logo {
+        align-items: center;
+        gap: 50px;
+    }
+
+    .logo nav ul {
+        flex-direction: column;
+    }
+
+    .sm {
+        align-items: center;
+    }
+
+    .creations {
+        grid-template-areas: "header" "main" "button";
+        row-gap: 30px;
+    }
+
+    .creations h3 {
+        justify-self: center;
+    }
+
+    .creations button {
+        justify-self: center;
+    }
+
+    header {
+        background: url(./images/mobile/image-hero.jpg) no-repeat;
+        background-size: 100%;
+    }
+}
